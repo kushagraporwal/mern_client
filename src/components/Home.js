@@ -80,6 +80,7 @@ const Home = () => {
         
         try{
             console.log("Hello");
+            window.alert("deleting");
             const res= await fetch(`"https://kushagra101.herokuapp.com/decline1/${name._id}`,{
                 method: "DELETE",
                 headers: {
@@ -91,7 +92,7 @@ const Home = () => {
             const data1= await res.json();
             window.alert(data1);
             console.log(data1);
-            //window.location.reload();
+            window.location.reload();
             
         }
         catch(err){
