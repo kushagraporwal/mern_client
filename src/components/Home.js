@@ -41,6 +41,7 @@ const Home = () => {
         value= e.target.value;
         setuser({...user, [name]:value});
     }
+
     const postdata= async(e) =>{
         e.preventDefault();
         const {username, email, mobile, address}  = user;
@@ -70,7 +71,6 @@ const Home = () => {
             }
             else{
                 window.alert("User added successfully");
-                setuser({username:"", email:"", mobile:"", address:""});
                 window.location.reload();
             }
         }
