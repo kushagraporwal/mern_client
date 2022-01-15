@@ -90,7 +90,7 @@ const Home = () => {
             });
             const data1= await res.json();
             console.log(data1);
-            window.location.reload();
+            //window.location.reload();
             
         }
         catch(err){
@@ -158,7 +158,7 @@ const Home = () => {
         {conn.map(name => (
             <tr style={{border: '2px solid black'}}>
         <td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.username}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.email}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.mobile}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.address}</p></td>
-        <td style={{border: '2px solid black'}}><form method="DELETE">
+        <td style={{border: '2px solid black'}}><form>
             <input type="submit" name="submit" className="btn btn-danger" style={{color: 'black'}} value="Delete" onClick={()=>decline(name)}/>
             </form></td>
         </tr>
