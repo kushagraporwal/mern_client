@@ -7,7 +7,7 @@ const Home = () => {
     const callinfo = async()=>{
         try{
             console.log('welcome2');
-            const res= await fetch('/home1',{
+            const res= await fetch('https://kushagra101.herokuapp.com/home1',{
                 method: "GET",
                 headers: {
                     Accept: "application/json",
@@ -49,7 +49,7 @@ const Home = () => {
             window.alert("Data is empty");
         }
         else{
-            const res= await fetch("/register", {
+            const res= await fetch("https://kushagra101.herokuapp.com/register", {
                 method:"POST",
                 headers:{
                     "Content-Type": "application/json"
@@ -80,7 +80,7 @@ const Home = () => {
         
         try{
             console.log("Hello");
-            const res= await fetch(`/decline1/${name._id}`,{
+            const res= await fetch(`https://kushagra101.herokuapp.com/decline1/${name._id}`,{
                 method: "DELETE",
                 headers: {
                     Accept: "application/json",

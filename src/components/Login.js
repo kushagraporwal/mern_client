@@ -21,7 +21,7 @@ const Login = () => {
             window.alert("Data is empty");
         }
         else{
-            const res= await fetch("/login1", {
+            const res= await fetch("https://kushagra101.herokuapp.com/login1", {
                 method:"POST",
                 headers:{
                     "Content-Type": "application/json"
