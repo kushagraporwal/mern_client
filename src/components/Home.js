@@ -41,7 +41,6 @@ const Home = () => {
         value= e.target.value;
         setuser({...user, [name]:value});
     }
-
     const postdata= async(e) =>{
         e.preventDefault();
         const {username, email, mobile, address}  = user;
@@ -71,6 +70,7 @@ const Home = () => {
             }
             else{
                 window.alert("User added successfully");
+                setuser({username:"", email:"", mobile:"", address:""});
                 window.location.reload();
             }
         }
@@ -80,7 +80,7 @@ const Home = () => {
         
         try{
             console.log("Hello");
-            const res= await fetch(`https://kushagra101.herokuapp.com/decline1/${name._id}`,{
+            const res= await fetch(`"https://kushagra101.herokuapp.com/decline1/${name._id}`,{
                 method: "DELETE",
                 headers: {
                     Accept: "application/json",
@@ -90,7 +90,7 @@ const Home = () => {
             });
             const data1= await res.json();
             console.log(data1);
-            //window.location.reload();
+            window.location.reload();
             
         }
         catch(err){
@@ -158,7 +158,7 @@ const Home = () => {
         {conn.map(name => (
             <tr style={{border: '2px solid black'}}>
         <td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.username}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.email}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.mobile}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.address}</p></td>
-        <td style={{border: '2px solid black'}}><form>
+        <td style={{border: '2px solid black'}}><form method="DELETE">
             <input type="submit" name="submit" className="btn btn-danger" style={{color: 'black'}} value="Delete" onClick={()=>decline(name)}/>
             </form></td>
         </tr>
