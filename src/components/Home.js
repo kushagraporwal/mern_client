@@ -81,7 +81,7 @@ const Home = () => {
         try{
             console.log("Hello");
             window.alert("deleting");
-            const res= await fetch(`"https://kushagra101.herokuapp.com/decline1/${name._id}`,{
+            const res= await fetch(`https://kushagra101.herokuapp.com/decline1/${name._id}`,{
                 method: "DELETE",
                 headers: {
                     Accept: "application/json",
