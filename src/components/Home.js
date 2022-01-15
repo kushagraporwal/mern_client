@@ -89,6 +89,7 @@ const Home = () => {
                 credentials: "include"
             });
             const data1= await res.json();
+            window.alert(data1);
             console.log(data1);
             window.location.reload();
             
