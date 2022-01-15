@@ -82,7 +82,7 @@ const Home = () => {
             console.log("Hello");
             window.alert("deleting");
             const res= await fetch(`https://kushagra101.herokuapp.com/decline1/${name._id}`,{
-                method: "POST",
+                method: "DELETE",
                 headers: {
                     Accept: "application/json",
                     "Content-Type":"application/json"
@@ -160,7 +160,7 @@ const Home = () => {
         {conn.map(name => (
             <tr style={{border: '2px solid black'}}>
         <td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.username}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.email}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.mobile}</p></td><td style={{border: '2px solid black'}}><p style={{display: 'inline'}}>{name.address}</p></td>
-        <td style={{border: '2px solid black'}}><form method="POST">
+        <td style={{border: '2px solid black'}}><form method="DELETE">
             <input type="submit" name="submit" className="btn btn-danger" style={{color: 'black'}} value="Delete" onClick={()=>decline(name)}/>
             </form></td>
         </tr>
