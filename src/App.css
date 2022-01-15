@@ -12,7 +12,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,7 +26,28 @@
 .App-link {
   color: #61dafb;
 }
+.myBox {
+  padding: 5px;
+  height: 410px;
+  overflow-y: scroll;
+  background-color: #8CF0FB;
+  border-radius: 5px;
+  border: 5px solid black;
+  width: 80%;
+  }
 
+  table {
+    border: 4px solid black;
+    
+  }
+  th, td {
+    background-color: #96D4D4;
+    border: 2px solid black;
+    padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
