@@ -105,11 +105,11 @@ const Home = () => {
     {
         conn.push(users[u]);
     }
-    console.log("users are");
-    for(let i=conn.length-1;i>=0;i--)
-    {
-        console.log(conn[i]);
-    }
+    // console.log("users are");
+    // for(let i=conn.length-1;i>=0;i--)
+    // {
+    //     console.log(conn[i]);
+    // }
 
     return (
         <div >
