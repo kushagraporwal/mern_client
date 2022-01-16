@@ -21,7 +21,7 @@ const Home = () => {
                 history('/');
             }
             else{
-                console.log(data);
+                //console.log(data);
                 setdata(data);
             }
         }
@@ -64,7 +64,7 @@ const Home = () => {
             const data1= await res.json();
             if(data1.status===422 || !data1 || data1.status===500 || data1=="-2")
             {
-                window.alert("Invalid Credentials");
+                window.alert("Please fill valid data!");
             }
             else{
                 window.alert("User added successfully");
