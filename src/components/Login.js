@@ -14,8 +14,6 @@ const Login = () => {
     const postdata= async(e) =>{
         e.preventDefault();
         const {email, password}  = user;
-        console.log("email "+email);
-        console.log("password "+password);
         if(email===""||password==="")
         {
             window.alert("Data is empty");

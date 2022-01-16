@@ -6,7 +6,6 @@ const Home = () => {
     const [userdata, setdata]= useState({});
     const callinfo = async()=>{
         try{
-            console.log('welcome2');
             const res= await fetch('https://kushagra101.herokuapp.com/home1',{
                 method: "GET",
                 headers: {
@@ -63,7 +62,6 @@ const Home = () => {
                 })
             });
             const data1= await res.json();
-            console.log("data "+data1);
             if(data1.status===422 || !data1 || data1.status===500 || data1=="-2")
             {
                 window.alert("Invalid Credentials");
@@ -79,7 +77,6 @@ const Home = () => {
     const decline = async(name)=>{
         
         try{
-            console.log("Hello");
             window.alert("deleting");
             const res= await fetch(`https://kushagra101.herokuapp.com/decline1/${name._id}`,{
                 method: "DELETE",
@@ -90,8 +87,6 @@ const Home = () => {
                 credentials: "include"
             });
             const data1= await res.json();
-            window.alert(data1);
-            console.log(data1);
             window.location.reload();
             
         }
