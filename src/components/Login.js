@@ -30,7 +30,8 @@ const Login = () => {
                     email:email,
                     password:password,
                     check:"OK"
-                })
+                }),
+                credentials: "include"
             });
             const data= res.json();
             console.log("data is "+data);
